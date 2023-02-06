@@ -1,0 +1,14 @@
+<form class="row row-cols-lg-auto g-3 align-items-center" novalidate (ngSubmit)="login()">
+    <div>
+    <div class="form-outline mb-4">
+      <input type="userName" [(ngModel)]="model.userName" #emailControl="ngModel" name="userName" 
+      id="userName" tabindex="1" class="form-control" placeholder="Nazwa użytkownika" required>
+    </div>
+    <div class="form-outline mb-4">
+      <input type="password" name="password" required id="loginPassword"
+      [(ngModel)]="model.password" #passwordControl="ngModel" tabindex="2" class="form-control form-control-appended"
+      placeholder="Twoje tajne hasło" /> 
+    </div>
+    <button type="submit" class="btn btn-primary btn-block align-items-center text-dark bg-light border-dark">Zaloguj</button>
+  </div>
+  </form>

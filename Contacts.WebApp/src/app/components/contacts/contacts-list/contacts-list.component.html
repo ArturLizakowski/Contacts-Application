@@ -1,0 +1,30 @@
+<div class="container my-5">
+    <h1 class="mb-2">Kontakty</h1>
+    <table class="table" *ngIf="contacts && contacts.length > 0">
+        <thead>
+            <tr>
+                <th>Imie</th>
+                <th>Nazwisko</th>
+                <th>Email</th>
+                <th>Kategoria</th>
+                <th>Podkategoria</th>
+                <th>Telefon</th>
+                <th>Data Urodzenia</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contacts ">
+                <td>{{ contact.firstName }}</td>
+                <td>{{ contact.lastName }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.category }}</td>
+                <td>{{ contact.subcategory }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.dateOfBirth }}</td>
+                <td><a class="text-dark" [routerLink]="['/contacts', 'edit', contact.id]">Edytuj</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!contacts || contacts.length <= 0">Nie znaleziono kontaktów</p>
+</div>

@@ -1,0 +1,58 @@
+<div class="conteiner my-3">
+    <h1 class="mb-2">Edytuj kontakt</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateContact()">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" readonly
+                    name="id" [(ngModel)] = "contactDetails.id">
+                </div>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">Imię</label>
+                    <input type="text" class="form-control" id="firstName" 
+                    name="firstName" [(ngModel)] = "contactDetails.firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Nazwisko</label>
+                    <input type="text" class="form-control" id="lastName"
+                    name="lastName" [(ngModel)] = "contactDetails.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email"
+                    name="email" [(ngModel)] = "contactDetails.email">
+                </div>
+                <div class="select mb-3">
+                    <label for="category" class="form-label">Kategoria</label>
+                    <select class="form-select" aria-label="Default select example"
+                    name="category" [(ngModel)] = "contactDetails.category">
+                        <option selected disabled>Wybierz kategorie</option>
+                        <option text="Rodzina">Rodzina</option>
+                        <option text="Szef">Szef</option>
+                        <option text="Klient">Klient</option>
+                        <option text="Inny" value="IsHidden" (select)="onSelect()">Inny</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="subcategory" class="form-label">Podkategoria</label>
+                    <input type="text" class="form-control" id="subcategory"
+                    name="subcategory" [(ngModel)] = "contactDetails.subcategory">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefon</label>
+                    <input type="text" class="form-control" id="phone"
+                    name="phone" [(ngModel)] = "contactDetails.phone">
+                </div>
+                <div class="mb-3">
+                    <label for="dateOfBirth" class="form-label">Data Urodzenia</label>
+                    <input type="text" class="form-control" id="dateOfBirth"
+                    name="dateOfBirth" [(ngModel)] = "contactDetails.dateOfBirth">
+                </div>
+                <button type="submit" class="btn btn-primary mr-5 bg-light border-dark text-dark">Zapisz</button>
+                <button type="button" class="btn btn-danger bg-light text-dark"(click)="deleteContact(contactDetails.id)">Usuń</button>
+
+              </form>
+        </div>
+    </div>
+</div>

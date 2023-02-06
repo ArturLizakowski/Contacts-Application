@@ -1,0 +1,51 @@
+<div class="conteiner my-3">
+    <h1 class="mb-2">Dodaj nowy kontakt</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addContact()">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">Imię</label>
+                    <input type="text" class="form-control" id="firstName" 
+                    name="firstName" [(ngModel)] = "addContactToList.firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Nazwisko</label>
+                    <input type="text" class="form-control" id="lastName"
+                    name="lastName" [(ngModel)] = "addContactToList.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email"
+                    name="email" [(ngModel)] = "addContactToList.email">
+                </div>
+                <div class="select mb-3">
+                    <label for="category" class="form-label">Kategoria</label>
+                    <select class="form-select" aria-label="Default select example"
+                    name="category" [(ngModel)] = "addContactToList.category">
+                        <option selected disabled>Wybierz kategorie</option>
+                        <option text="Rodzina">Rodzina</option>
+                        <option text="Szef">Szef</option>
+                        <option text="Klient">Klient</option>
+                        <option text="Inny" value="IsHidden" (select)="onSelect()">Inny</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="subcategory" class="form-label">Podkategoria</label>
+                    <input type="text" class="form-control" id="subcategory"
+                    name="subcategory" [(ngModel)] = "addContactToList.subcategory">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefon</label>
+                    <input type="text" class="form-control" id="phone"
+                    name="phone" [(ngModel)] = "addContactToList.phone">
+                </div>
+                <div class="mb-3">
+                    <label for="dateOfBirth" class="form-label">Data Urodzenia</label>
+                    <input type="text" class="form-control" id="dateOfBirth"
+                    name="dateOfBirth" [(ngModel)] = "addContactToList.dateOfBirth">
+                </div>
+                <button type="submit" class="btn btn-primary">Zapisz</button>
+            </form>
+        </div>
+    </div>
+</div>
