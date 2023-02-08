@@ -1,7 +1,6 @@
 ﻿using Contacts.API.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Contacts.API.Datebase
 {
   public class ContactsDbContext : DbContext
