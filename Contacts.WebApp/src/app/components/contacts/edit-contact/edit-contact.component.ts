@@ -1,4 +1,3 @@
-import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Contact } from 'src/app/models/contact.model';
@@ -21,8 +20,6 @@ export class EditContactComponent implements OnInit {
     dateOfBirth: ''
   };
   
-  
-
   constructor(
     private route: ActivatedRoute,
     private contactsService: ContactsService,
