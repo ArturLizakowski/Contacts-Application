@@ -1,5 +1,4 @@
 # Contacts-Application
-Recruitment project.
 
 ASP.NET Core Web API 6 and Agular 15
 
